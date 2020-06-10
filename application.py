@@ -25,10 +25,10 @@ def play(row, col):
         session["turn"] = "O"
     else:
         session["turn"] = "X"
-    return redirect(url_for("index"))
+    return redirect(url_for(".index"))
 
 @app.route("/reset")
 def reset():
     session.clear()
     
-    return redirect(url_for("index"))
+    return redirect(url_for(".index"))
