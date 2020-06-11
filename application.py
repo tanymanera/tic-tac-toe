@@ -13,7 +13,7 @@ app.secret_key = "super secret key"
 @app.route("/")
 def index():
 
-    if "board" not in session:
+    if not "board" in session:
         session["board"] = [[None, None, None], [None, None, None], [None, None, None]]
         session["turn"] = "X"
 
