@@ -2,29 +2,10 @@
 <html>
     <head>
         <title>Tic Tac Toe</title>
-        <style>
-            table {
-                border-collapse: collapse;
-            }
-            td {
-                border: 1px solid black;
-                width: 150px;
-                height: 150px;
-                font-size: 30px;
-                text-align: center;
-            }
-            td > a {
-                font-size: 18px;
-            }
-            button {
-                height: 50px;
-                width: 150px;
-                margin-top: 50px;
-            }
-        </style>
+        <link rel="stylesheet" href="./static/style.css">
     </head>
     <body>
-        <table>
+        <table class="center">
             {% for i in range(3) %}
                 <tr>
                     {% for j in range(3) %}
@@ -40,5 +21,6 @@
             {% endfor %}
         </table>
         <button name="reset"><a href="{{ url_for('reset')}}">Reset</a></button>
+        <button onclick="alert('Do not waste time!')">Give me an hint!</button>
     </body>
 </html>

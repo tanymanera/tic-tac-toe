@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+    text-align: center;
+}
+td > a {
+    font-size: 18px;
+}
+button {
+    height: 50px;
+    width: 150px;
+    margin-top: 50px;
+}
