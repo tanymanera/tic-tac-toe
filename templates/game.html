@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Tic Tac Toe</title>
-        <link rel="stylesheet" href="./static/style.css">
-    </head>
-    <body>
+{%  extends "layout.html" %}
+    {% block body %}
         <table class="center">
             {% for i in range(3) %}
                 <tr>
@@ -22,5 +17,4 @@
         </table>
         <button name="reset"><a href="{{ url_for('reset')}}">Reset</a></button>
         <button onclick="alert('Do not waste time!')">Give me an hint!</button>
-    </body>
-</html>
+    {% endblock %}

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, redirect, url_for
+from flask import Flask, render_template, session, redirect, url_for, request
 from flask_session import Session
 from tempfile import mkdtemp
 
@@ -12,6 +12,12 @@ app.secret_key = "super secret key"
 
 @app.route("/")
 def index():
+    session.clear()
+    return render_template("index.html")
+    
+
+@app.route("/game")
+def game():
 
     if not "board" in session:
         session["board"] = [[None, None, None], [None, None, None], [None, None, None]]
@@ -26,7 +32,7 @@ def play(row, col):
         session["turn"] = "O"
     else:
         session["turn"] = "X"
-    return redirect(url_for(".index"))
+    return redirect(url_for(".game"))
 
 @app.route("/reset")
 def reset():

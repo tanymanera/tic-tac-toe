@@ -17,10 +17,12 @@ td {
     font-size: 30px;
     text-align: center;
 }
+
 td > a {
     font-size: 18px;
 }
-button {
+
+button, input[type=submit] {
     height: 50px;
     width: 150px;
     margin-top: 50px;
